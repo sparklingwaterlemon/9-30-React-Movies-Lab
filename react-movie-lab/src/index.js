@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from "./pages/App/App";
+// Importing top level BrowserRouter Component
+import { BrowserRouter as BowserRouter } from "react-router-dom";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BowserRouter>
+      <App />
+    </BowserRouter>
   </React.StrictMode>
 );
 
