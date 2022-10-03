@@ -16,16 +16,18 @@ function App() {
     setUser(user);
     console.log("adding user");
     console.log(user)
+    console.log("testing user.name")
+    console.log(user.name)
   }
 
   return (
     <main className="App">
         { user ?
           <>
-            <NavBar />
+            <NavBar username={user.name}/>
             <Routes>
-              <Route path="/movies" element={<MovieIndexPage />} />
-              <Route path="/actors" element={<ActorIndexPage />} />
+              <Route path="/movies" element={<MovieIndexPage username={user.name}/>} />
+              <Route path="/actors" element={<ActorIndexPage username={user.name}/>} />
             </Routes>
           </>
           :

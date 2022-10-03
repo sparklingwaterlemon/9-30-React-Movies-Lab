@@ -1,9 +1,9 @@
 import "./ActorIndexPage.css";
 
-function ActorIndexPage(){
+function ActorIndexPage({username}){
     return (
         <div>
-            <h2 className="title"> Actor Index Page . jsx</h2>
+            <h1 className="title"> {username} Actor Index Page.jsx</h1>
         </div>
     );
   }
