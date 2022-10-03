@@ -12,20 +12,27 @@ import './App.css';
 function App() {
   const [user, setUser] = useState(null);
 
+  function addUser(user){
+    setUser(user);
+    console.log("adding user");
+    console.log(user)
+  }
+
   return (
     <main className="App">
-      <h1> Test App.js </h1>
-      { user ?
-        <>
-          <NavBar />
-          <Routes>
-            <Route path="/movies" element={<MovieIndexPage />} />
-            <Route path="/actors" element={<ActorIndexPage />} />
-          </Routes>
-        </>
-        :
-        <LoginPage />
-      }  
+      <div className="full-screen-container">
+        { user ?
+          <>
+            <NavBar />
+            <Routes>
+              <Route path="/movies" element={<MovieIndexPage />} />
+              <Route path="/actors" element={<ActorIndexPage />} />
+            </Routes>
+          </>
+          :
+          <LoginPage addUser={addUser} />
+        }
+      </div>
     </main>
   );
 }
