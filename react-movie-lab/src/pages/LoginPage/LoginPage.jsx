@@ -23,6 +23,7 @@ function LoginPage({addUser}){
 
     return (
         <>
+        <div className="full-screen-container">
             <div className="login-container">
                 <h3 className="login-title"> Please enter your desired username below </h3>
                 <form onSubmit={handleAddUser}>
@@ -36,6 +37,7 @@ function LoginPage({addUser}){
                     <button className="login-button" type="submit"> Sign In </button>
                 </form>
             </div>
+        </div>
         </>
     );
   }

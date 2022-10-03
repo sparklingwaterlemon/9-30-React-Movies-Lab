@@ -20,7 +20,6 @@ function App() {
 
   return (
     <main className="App">
-      <div className="full-screen-container">
         { user ?
           <>
             <NavBar />
@@ -32,7 +31,6 @@ function App() {
           :
           <LoginPage addUser={addUser} />
         }
-      </div>
     </main>
   );
 }

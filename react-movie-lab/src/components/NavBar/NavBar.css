@@ -1,0 +1,26 @@
+
+body {
+    background-color: black
+}
+
+nav {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: white;
+}
+
+a:link , a:visited {
+    background-color: hsla(201, 100%, 6%, 0.6);
+    color: white;
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid #00a6ff;
+    border-radius: 8px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #00a6ff;
+}
