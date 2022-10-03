@@ -1,5 +1,4 @@
 import "./MovieCardPage.css";
-import {useState} from "react";
 import {movies} from "../../../public/data.js"
 
 
