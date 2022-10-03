@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import './LoginPage.css';
 
@@ -12,14 +13,19 @@ function LoginPage({addUser}){
         console.log(evt.target.value)
     }
   
-
     function handleAddUser(evt){
         evt.preventDefault();
         addUser(newUser)        
         // clearing form
         setNewUser({name:""})
     }
+    
+    const navigate = useNavigate();
 
+    function navigateToMovieIndex(){
+        console.log("..redirecting..");
+        navigate("/movies")
+    }
 
     return (
         <>
@@ -34,7 +40,7 @@ function LoginPage({addUser}){
                             onChange={handleChange}
                             required/>
                     </div>
-                    <button className="login-button" type="submit"> Sign In </button>
+                    <button className="login-button" type="submit" onClick={navigateToMovieIndex}> Sign In </button>
                 </form>
             </div>
         </div>
