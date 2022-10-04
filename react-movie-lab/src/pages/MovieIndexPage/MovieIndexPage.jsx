@@ -5,8 +5,7 @@ import MovieCardPage from "./MovieCardPage/MovieCardPage";
 
 function MovieIndexPage({username}){
     return (
-        <div>
-            <h1 className="movie-index-title"> User - {username} </h1>
+        <div className="movie-index-page">
             <MovieCardPage />
         </div>
     );

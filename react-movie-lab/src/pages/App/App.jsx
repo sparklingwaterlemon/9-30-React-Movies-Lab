@@ -26,8 +26,8 @@ function App() {
           <>
             <NavBar username={user.name}/>
             <Routes>
-              <Route path="/movies" element={<MovieIndexPage username={user.name}/>} />
-              <Route path="/actors" element={<ActorIndexPage username={user.name}/>} />
+              <Route path="/movies" element={<MovieIndexPage />} />
+              <Route path="/actors" element={<ActorIndexPage />} />
             </Routes>
           </>
           :
