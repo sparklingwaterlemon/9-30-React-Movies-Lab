@@ -37,7 +37,7 @@ a:hover {
     font-weight: 500;
     background-image: linear-gradient(to bottom right, red, yellow);
     transform: scale(1.2);
-    cursor: pointer;
+    cursor: default;
     border: 2px solid #00a6ff;
 }
 
