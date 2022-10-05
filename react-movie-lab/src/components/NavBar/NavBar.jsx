@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import "./NavBar.css";
 
-function NavBar({username}) {
+function NavBar({username}){
   return (
     <>
       <br />
@@ -9,7 +9,7 @@ function NavBar({username}) {
       <nav>
           <Link to="/movies"> Movie Index Page </Link>
           <Link to="/actors"> Actor Index Page </Link>
-          <span className="username-header"> Welcome, {username.toUpperCase()} </span>
+          <span className="username-header">Welcome, {username.toUpperCase()}</span>
       </nav>
       </div>
     </>

@@ -1,21 +1,17 @@
 
-body {
-    background-color: black
-}
-
 nav {
     font-family: 'Quicksand', sans-serif;
     font-size: 1.5em;
     font-weight: 400;
     color: white;
-    height: 120px;
+    height: 160px;
 }
 
 
-a:link , a:visited, .username-header {
+nav > a:link , a:visited, .username-header {
     background-color: hsla(201, 100%, 6%, 0.6);
     color: white;
-    margin: 10px 30px 10px 30px;
+    margin: 16px 30px 10px 30px;
     padding: 20px;
     display: inline-block;
     border: 2px solid #00a6ff;
@@ -24,7 +20,7 @@ a:link , a:visited, .username-header {
     transition: transform .2s;
 }
 
-a:hover {
+nav > a:hover {
     color: white;
     font-weight: 500;
     background-image: linear-gradient(to bottom right, #001aff, rgb(0, 255, 153));
@@ -32,7 +28,7 @@ a:hover {
     transform: scale(1.2);
 }
 
-.username-header:hover {
+nav > .username-header:hover {
     color: black;
     font-weight: 500;
     background-image: linear-gradient(to bottom right, red, yellow);
@@ -46,7 +42,7 @@ a:hover {
     nav {
         height: 300px
     }
-    a:link , a:visited, .username-header {
+    nav > a:link , a:visited, .username-header {
         width: 250px;
         display: block;
         margin: 20px auto;
