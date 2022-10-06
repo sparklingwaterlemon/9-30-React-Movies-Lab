@@ -1,10 +1,11 @@
 import "./MovieCardPage.css";
-import {movies} from "../../../public/data.js"
 import { Link } from "react-router-dom";
 
 
 
-function MovieCardPage(){
+function MovieCardPage({movies}){
+    // passing key={index} below - why am I still getting a warning?? stating each child in a list should have a unique key??
+    // tried <li key={index}> as well. same error
     const movieList = movies.map((element, index) => {
         return (
             <>

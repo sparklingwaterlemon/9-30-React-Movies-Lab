@@ -4,11 +4,11 @@ import NavBar from "../../components/NavBar/NavBar";
 
 
 
-function MovieIndexPage({username}){
+function MovieIndexPage({username, movies}){
     return (
         <div className="movie-index-full-screen-container">
             <NavBar username={username}/>
-            <MovieCardPage />
+            <MovieCardPage movies={movies}/>
         </div>
     );
   }

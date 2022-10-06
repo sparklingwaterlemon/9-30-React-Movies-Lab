@@ -5,6 +5,7 @@ import LoginPage from "../LoginPage/LoginPage";
 import ActorIndexPage from "../ActorIndexPage/ActorIndexPage";
 import MovieIndexPage from "../MovieIndexPage/MovieIndexPage";
 import MovieDetailPage from "../MovieIndexPage/MovieDetailPage/MovieDetailPage";
+import {movies} from "../../public/data.js";
 
 
 import './App.css';
@@ -22,10 +23,10 @@ function App() {
       { user ?
         <>
           <Routes>
-            <Route path="/movies" element={<MovieIndexPage username={user.name}/>} />
-            <Route path="/actors" element={<ActorIndexPage />} />
+            <Route path="/movies" element={<MovieIndexPage username={user.name} movies={movies}/>} />
+            <Route path="/actors" element={<ActorIndexPage username={user.name} movies={movies} />} />
           
-            <Route path="/movies/details/:id" element={<MovieDetailPage username={user.name}/>} />
+            <Route path="/movies/details/:id" element={<MovieDetailPage username={user.name} />} />
           </Routes>
         </>
         :
