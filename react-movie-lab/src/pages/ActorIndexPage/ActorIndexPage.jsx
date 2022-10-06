@@ -3,32 +3,38 @@ import NavBar from "../../components/NavBar/NavBar";
 
 
 function ActorIndexPage({username, movies}){
-      console.log("----------");
-    
     const actorList = new Set();
-    console.log(actorList)
-    console.log(typeof actorList)
 
-    console.log("a")
-    actorList.add("a")
-    console.log(actorList)
+    // woah - forEach works? should we stick to map?
+    // let's goooo -- nested forEach'es
+    let howManyActors = 0;
 
-    console.log("b")
-    actorList.add("b")
-    console.log(actorList)
-
-    console.log("a")
-    actorList.add("a")
-    console.log(actorList)
-
-    console.log("----------")
-    let value_string = "";
-    actorList.forEach(function(value){
-        value_string = value 
-        console.log(value_string);
+    movies.forEach((movie)=>{
+        movie.cast.forEach((cast)=>{
+            actorList.add(cast)
+        })
     })
-  
 
+
+
+
+    // let value_string = "";
+    // let forEachOfActors = actorList.forEach(function(value){
+    //     value_string = value;
+    //     console.log(value_string)
+    //     return(
+    //         <h3> {value_string} </h3>
+    //     )
+    // })
+    // interesting - unable to pass a forEach function to render
+    // how to map a set? with google found the Array.from() method - below
+
+    // Array.from() method... interesting
+    let forEachOfActors2 = Array.from(actorList).map((element)=>{
+        return(
+            <p> {element} </p>
+        )
+    })
 
 
 
@@ -36,8 +42,7 @@ function ActorIndexPage({username, movies}){
     return (
         <>
         <NavBar username={username} />
-        <h1> test </h1>
-        
+        {forEachOfActors2}
         </>
     );
   }
